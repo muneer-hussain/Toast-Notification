@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+#notification {
+    background-color: #f7f7f7;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 20px 20px 0px 20px;
+    border-radius: 20px;
+    width: 19vw;
+    transform: translateX(100vw);
+}
+
+#notification-wrapper {
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#heading {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: inherit;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.fa-check-circle {
+    color: #3939d4;
+    font-size: 30px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#notification-text {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.fa-times {
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+}
+
+#notification-btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 100%;
+    position: fixed;
+}
+
+#notification-btn {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #00b8b8;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 3px 5px 20px #adadad;
+    cursor: pointer;
+}
+
+.showNotification {
+    transform: translateX(-28vw);
+}
+
+.progress {
+    height: 3px;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    animation: progress 5s linear;
+    transform-origin: left;
+}
+
+@keyframes progress {
+    0% {
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 1000px) {
+    .showNotification {
+        transform: translateX(-86vw);
+    }
+    #notification {
+        width: 60vw;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    #notification-text {
+        font-family: inherit;
+        font-size: 17px;
+        font-weight: 400;
+    }
+    .fa-times {
+        right: 15px;
+    }
+    #heading {
+        font-size: 19px;
+    }
+    #notification-btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
