@@ -94,6 +94,9 @@ body {
 }
 
 @media (max-width: 1000px) {
+    body {
+        overflow: hidden;
+    }
     .showNotification {
         transform: translateX(-86vw);
     }
